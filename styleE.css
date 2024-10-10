@@ -1,0 +1,209 @@
+/* Global Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* Base font weight */
+    background-size: cover;
+}
+/* Mengatur video background */
+.video-background {
+    position: fixed; /* Menempel pada layar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Menempatkan video di belakang konten lainnya */
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan video mengisi seluruh area */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* Header */
+header {
+    background-color: rgba(34, 34, 34, 0.8); /* Semi-transparent dark gray (#222222) */
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+/* Navigation */
+nav {
+background-color: rgba(0, 0, 139, 0.5); /* 50% transparency */
+    padding: 10px 0; /* Adjusted padding */
+    text-align: center; /* Center align the navigation items */
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block; /* Inline-block for centered items */
+}
+
+nav ul li {
+    display: inline-block; /* Inline-block to prevent excessive spacing */
+    margin: 0 10px; /* Adjusted margin to fit properly */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* White for better contrast */
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 15px; /* Add some padding for clickable area */
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
+}
+
+
+/* Sidebar Style */
+.sidenav {
+    height: 100%;
+    width: 250px; /* Lebar sidebar yang lebih besar */
+    position: fixed;
+    top: 0;
+    left: 0; /* Posisi di kiri */
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 999;
+}
+
+.sidenav a {
+    padding: 16px; /* Padding untuk menu item */
+    text-decoration: none;
+    font-size: 25px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Efek hover */
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Posisi di kiri atas sidebar */
+}
+
+/* Page Content */
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+/* Main Layout */
+.main-content {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    flex-direction: row;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 20px;
+    flex: 1;
+    border-radius: 10px;
+    min-width: 250px; /* Ensures sidebar doesn’t shrink too much */
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+    color:#D2691E
+    font-weight: 600;
+}
+
+.sidebar img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Main Content */
+.content {
+    flex: 2;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    border-radius: 8px;
+    min-width: 250px; /* Ensures content doesn’t shrink too much */
+}
+
+.content h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    color:#D2691E
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(34, 34, 34, 0.8); /* Semi-transparent dark gray (#222222) */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+}
+/* Mengubah tanda list menjadi kotak */
+ul {
+    list-style-type: square; /* Mengubah bullet menjadi kotak */
+    padding-left: 20px; /* Menambahkan padding agar tidak terlalu menempel di tepi */
+}
+
+li {
+    margin-bottom: 10px; /* Menambahkan jarak antar item list */
+}
